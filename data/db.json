@@ -13,9 +13,47 @@
       "baselineCo2": 680,
       "note": "游客步道上方，滴水频率稳定",
       "createdAt": "2026-06-14T08:00:00.000Z",
-      "updatedAt": "2026-06-14T08:00:00.000Z",
+      "updatedAt": "2026-06-18T10:05:00.000Z",
       "history": [
+        { "at": "2026-06-18T10:05:00.000Z", "action": "重点保护", "note": "游客干扰补测未闭环，期间保持重点保护" },
         { "at": "2026-06-14T08:00:00.000Z", "action": "创建", "note": "样点建档" }
+      ]
+    },
+    {
+      "id": "site-seed-2",
+      "cave": "北麓三号洞",
+      "zone": "石笋林厅",
+      "pointCode": "S-12",
+      "route": "东线巡测",
+      "sensitivity": "中",
+      "protectedStatus": "常规观察",
+      "baselineTemp": 15.8,
+      "baselineHumidity": 95,
+      "baselineCo2": 620,
+      "note": "远离步道，环境稳定",
+      "createdAt": "2026-06-14T08:10:00.000Z",
+      "updatedAt": "2026-06-14T08:10:00.000Z",
+      "history": [
+        { "at": "2026-06-14T08:10:00.000Z", "action": "创建", "note": "样点建档" }
+      ]
+    },
+    {
+      "id": "site-seed-3",
+      "cave": "南崖一号洞",
+      "zone": "暗河廊道",
+      "pointCode": "H-03",
+      "route": "南线巡测",
+      "sensitivity": "高",
+      "protectedStatus": "暂停开放",
+      "baselineTemp": 14.9,
+      "baselineHumidity": 97,
+      "baselineCo2": 540,
+      "note": "廊道渗水整治中，暂停开放，巡测仅留档",
+      "createdAt": "2026-06-14T08:20:00.000Z",
+      "updatedAt": "2026-06-16T09:00:00.000Z",
+      "history": [
+        { "at": "2026-06-16T09:00:00.000Z", "action": "暂停开放", "note": "廊道渗水整治" },
+        { "at": "2026-06-14T08:20:00.000Z", "action": "创建", "note": "样点建档" }
       ]
     }
   ],
@@ -29,14 +67,55 @@
       "humidity": 88,
       "co2": 920,
       "dripRate": 12,
-      "disturbance": "栏杆外侧有触碰痕迹",
       "photoUrl": "",
+      "disturbance": "栏杆外侧有触碰痕迹",
+      "kind": "常规",
       "status": "异常待复查",
-      "reviewNote": "",
+      "reviewNote": "游客干扰，已建立未闭环补测",
+      "corrections": [],
       "createdAt": "2026-06-18T10:00:00.000Z",
-      "updatedAt": "2026-06-18T10:00:00.000Z",
+      "updatedAt": "2026-06-18T10:05:00.000Z",
       "history": [
-        { "at": "2026-06-18T10:00:00.000Z", "action": "创建", "note": "CO2升高并有干扰痕迹" }
+        { "at": "2026-06-18T10:05:00.000Z", "action": "标记游客干扰", "note": "栏杆外侧有触碰痕迹" },
+        { "at": "2026-06-18T10:00:00.000Z", "action": "创建", "note": "常规巡测登记" }
+      ]
+    },
+    {
+      "id": "survey-seed-2",
+      "siteId": "site-seed-2",
+      "surveyor": "陆其",
+      "date": "2026-06-18",
+      "temperature": 15.9,
+      "humidity": 94,
+      "co2": 640,
+      "dripRate": 6,
+      "photoUrl": "",
+      "disturbance": "",
+      "kind": "常规",
+      "status": "正常",
+      "reviewNote": "",
+      "corrections": [],
+      "createdAt": "2026-06-18T11:00:00.000Z",
+      "updatedAt": "2026-06-18T11:00:00.000Z",
+      "history": [
+        { "at": "2026-06-18T11:00:00.000Z", "action": "创建", "note": "常规巡测登记" }
+      ]
+    }
+  ],
+  "rechecks": [
+    {
+      "id": "recheck-seed-1",
+      "surveyId": "survey-seed-1",
+      "siteId": "site-seed-1",
+      "originSurveyor": "沈宁",
+      "disturbance": "栏杆外侧有触碰痕迹",
+      "status": "未闭环",
+      "entries": [],
+      "closedAt": null,
+      "createdAt": "2026-06-18T10:05:00.000Z",
+      "updatedAt": "2026-06-18T10:05:00.000Z",
+      "history": [
+        { "at": "2026-06-18T10:05:00.000Z", "action": "建立补测", "note": "来源巡测 2026-06-18 / 沈宁，须不同人员两次读数一致方可闭环" }
       ]
     }
   ]
