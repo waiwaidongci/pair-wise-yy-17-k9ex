@@ -17,6 +17,42 @@
       "history": [
         { "at": "2026-06-14T08:00:00.000Z", "action": "创建", "note": "样点建档" }
       ]
+    },
+    {
+      "id": "site-seed-2",
+      "cave": "西坪二号洞",
+      "zone": "石幔区",
+      "pointCode": "S-03",
+      "route": "南线巡测",
+      "sensitivity": "高",
+      "protectedStatus": "暂停开放",
+      "baselineTemp": 15.8,
+      "baselineHumidity": 95,
+      "baselineCo2": 550,
+      "note": "封控期间仅保留留档巡测",
+      "createdAt": "2026-05-30T08:00:00.000Z",
+      "updatedAt": "2026-07-02T11:20:00.000Z",
+      "history": [
+        { "at": "2026-05-30T08:00:00.000Z", "action": "创建", "note": "样点建档" }
+      ]
+    },
+    {
+      "id": "site-seed-3",
+      "cave": "东麓四号洞",
+      "zone": "莲花台区",
+      "pointCode": "T-11",
+      "route": "东线巡测",
+      "sensitivity": "中",
+      "protectedStatus": "常规观察",
+      "baselineTemp": 16,
+      "baselineHumidity": 90,
+      "baselineCo2": 600,
+      "note": "读数稳定，常规观察",
+      "createdAt": "2026-06-01T08:00:00.000Z",
+      "updatedAt": "2026-06-01T08:00:00.000Z",
+      "history": [
+        { "at": "2026-06-01T08:00:00.000Z", "action": "创建", "note": "样点建档" }
+      ]
     }
   ],
   "surveys": [
@@ -29,14 +65,105 @@
       "humidity": 88,
       "co2": 920,
       "dripRate": 12,
-      "disturbance": "栏杆外侧有触碰痕迹",
+      "disturbance": "栏杆外侧有触碰痕迹，钟乳石表面疑被抚摸",
       "photoUrl": "",
-      "status": "异常待复查",
-      "reviewNote": "",
+      "kind": "常规",
+      "status": "待补测",
+      "conclusionLevel": "异常",
+      "conclusionReason": "温度偏高1.2℃；CO2为基准135%",
+      "superseded": [],
       "createdAt": "2026-06-18T10:00:00.000Z",
-      "updatedAt": "2026-06-18T10:00:00.000Z",
+      "updatedAt": "2026-06-18T14:00:00.000Z",
       "history": [
-        { "at": "2026-06-18T10:00:00.000Z", "action": "创建", "note": "CO2升高并有干扰痕迹" }
+        { "at": "2026-06-18T14:00:00.000Z", "action": "标记游客干扰", "note": "建立未闭环补测，样点保持重点保护" },
+        { "at": "2026-06-18T10:00:00.000Z", "action": "登记巡测", "note": "常规巡测 · 判定异常" }
+      ]
+    },
+    {
+      "id": "survey-seed-2",
+      "siteId": "site-seed-2",
+      "surveyor": "闻澜",
+      "date": "2026-07-02",
+      "temperature": 18,
+      "humidity": 82,
+      "co2": 860,
+      "dripRate": 6,
+      "disturbance": "",
+      "photoUrl": "",
+      "kind": "常规",
+      "status": "异常待复查",
+      "conclusionLevel": "封控",
+      "conclusionReason": "温度偏高2.2℃达封控阈值；湿度偏低13%达封控阈值；CO2为基准156%达封控阈值",
+      "superseded": [],
+      "createdAt": "2026-07-02T11:20:00.000Z",
+      "updatedAt": "2026-07-02T11:20:00.000Z",
+      "history": [
+        { "at": "2026-07-02T11:20:00.000Z", "action": "登记巡测", "note": "常规巡测 · 判定封控" }
+      ]
+    },
+    {
+      "id": "survey-seed-3",
+      "siteId": "site-seed-2",
+      "surveyor": "闻澜",
+      "date": "2026-07-05",
+      "temperature": 17.9,
+      "humidity": 83,
+      "co2": 852,
+      "dripRate": 6,
+      "disturbance": "",
+      "photoUrl": "",
+      "kind": "留档",
+      "status": "留档",
+      "conclusionLevel": "留档",
+      "conclusionReason": "暂停开放期间留档，不参与封控判定",
+      "superseded": [],
+      "createdAt": "2026-07-05T09:40:00.000Z",
+      "updatedAt": "2026-07-05T09:40:00.000Z",
+      "history": [
+        { "at": "2026-07-05T09:40:00.000Z", "action": "留档登记", "note": "样点暂停开放，仅留档，不占常规额度，不改变保护状态" }
+      ]
+    },
+    {
+      "id": "survey-seed-4",
+      "siteId": "site-seed-3",
+      "surveyor": "鹿栖",
+      "date": "2026-07-10",
+      "temperature": 16.3,
+      "humidity": 91,
+      "co2": 620,
+      "dripRate": 8,
+      "disturbance": "",
+      "photoUrl": "",
+      "kind": "常规",
+      "status": "正常",
+      "conclusionLevel": "正常",
+      "conclusionReason": "",
+      "superseded": [],
+      "createdAt": "2026-07-10T10:30:00.000Z",
+      "updatedAt": "2026-07-10T10:30:00.000Z",
+      "history": [
+        { "at": "2026-07-10T10:30:00.000Z", "action": "登记巡测", "note": "常规巡测 · 判定正常" }
+      ]
+    }
+  ],
+  "remeasures": [
+    {
+      "id": "remeasure-seed-1",
+      "siteId": "site-seed-1",
+      "sourceSurveyId": "survey-seed-1",
+      "sourceDate": "2026-06-18",
+      "initialSurveyor": "沈宁",
+      "disturbance": "栏杆外侧有触碰痕迹，钟乳石表面疑被抚摸",
+      "status": "未闭环",
+      "readings": [
+        { "at": "2026-06-19T09:10:00.000Z", "surveyor": "鹿栖", "temperature": 17.1, "humidity": 89, "co2": 880, "dripRate": 12, "matched": false }
+      ],
+      "closingVerdict": null,
+      "createdAt": "2026-06-18T14:00:00.000Z",
+      "updatedAt": "2026-06-19T09:10:00.000Z",
+      "history": [
+        { "at": "2026-06-19T09:10:00.000Z", "action": "首次补测读数", "note": "鹿栖 提交，等待再一次一致读数" },
+        { "at": "2026-06-18T14:00:00.000Z", "action": "建立补测", "note": "游客干扰标记，原巡测人 沈宁；补测须由其他人员完成" }
       ]
     }
   ]

@@ -309,6 +309,165 @@ main {
   border-radius: 8px;
 }
 
+.pill.tone-muted {
+  background: var(--panel-2);
+  color: var(--muted);
+}
+
+.card-warn {
+  border-left: 4px solid var(--warn);
+}
+
+.card-bad {
+  border-left: 4px solid var(--bad);
+}
+
+.pills {
+  display: inline-flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+.reasons {
+  margin: 10px 0 0;
+  padding-left: 18px;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+.quiet {
+  opacity: .75;
+}
+
+.disturbance {
+  margin: 8px 0;
+  padding: 8px 10px;
+  border-radius: 6px;
+  background: rgba(163, 92, 0, .1);
+  color: var(--warn);
+  font-size: 13px;
+}
+
+.verdict {
+  margin-top: 10px;
+  border-radius: 6px;
+  padding: 9px 10px;
+  display: grid;
+  gap: 3px;
+  font-size: 13px;
+  background: #f7f3eb;
+}
+
+.verdict strong {
+  font-size: 14px;
+}
+
+.verdict.ok {
+  background: rgba(38, 115, 77, .1);
+  color: var(--ok);
+}
+
+.verdict.warn {
+  background: rgba(163, 92, 0, .12);
+  color: var(--warn);
+}
+
+.verdict.bad {
+  background: rgba(161, 61, 61, .12);
+  color: var(--bad);
+}
+
+.verdict.tone-muted {
+  background: var(--panel-2);
+  color: var(--muted);
+}
+
+.superseded {
+  margin-top: 8px;
+  padding: 7px 10px;
+  border-radius: 6px;
+  background: rgba(105, 101, 93, .09);
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.tag {
+  display: inline-flex;
+  align-items: center;
+  font-size: 12px;
+  font-weight: 800;
+  color: var(--warn);
+  padding: 8px 10px;
+}
+
+.reading-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+  font-size: 13px;
+}
+
+.reading-table th,
+.reading-table td {
+  text-align: left;
+  padding: 8px;
+  border-bottom: 1px solid var(--line);
+  vertical-align: middle;
+}
+
+.reading-table th {
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.empty-cell {
+  text-align: center;
+  color: var(--muted);
+  padding: 18px;
+}
+
+.reading-form {
+  margin-top: 12px;
+  border-top: 1px dashed var(--line);
+  padding-top: 12px;
+}
+
+.modal-backdrop {
+  display: none;
+}
+
+#modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(32, 32, 29, .42);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 18px;
+  z-index: 20;
+}
+
+#modal.show {
+  display: flex;
+}
+
+.modal-card {
+  width: min(560px, 100%);
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  box-shadow: var(--shadow);
+  padding: 20px;
+  max-height: 90vh;
+  overflow: auto;
+}
+
+.modal-card h2 {
+  margin: 0 0 8px;
+}
+
 .toast {
   position: fixed;
   right: 20px;
@@ -322,6 +481,7 @@ main {
   transition: .2s ease;
   pointer-events: none;
   z-index: 9;
+  max-width: min(420px, calc(100vw - 40px));
 }
 
 .toast.show {
